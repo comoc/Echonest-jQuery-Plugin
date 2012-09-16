@@ -14,23 +14,19 @@
 			<script type="text/javascript">
 					$(document).ready(function() {
 
-//						var API_KEY  = "KTY7T5L87IZ1OG2TM";
 						var echonest = new EchoNest(API_KEY);
 
 						function searchDetail(index, artist, title, callback) {
-//						var url = 'http://developer.echonest.com/api/v4/track/profile';
 							var url = 'http://developer.echonest.com/api/v4/song/search';
 							var data = {
 								api_key: API_KEY,
 								format: 'json',
-//								artist: artist,
+//								artist: artist, // I tried to search with both artist and title, but faild. So currently I am using combined.
 //								title: title,
 								combined: artist + ' ' + title,
 								bucket:'audio_summary',
 								results: '1'
 							};
-//							console.log('artist:' + artist);
-//							console.log('title:' + title);
 							var KEY = ['c', 'c-sharp', 'd', 'e-flat', 'e', 'f', 'f-sharp', 'g', 'a-flat', 'a', 'b-flat', 'b'];
 							var request = {
 								url:url,
